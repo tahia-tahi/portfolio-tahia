@@ -4,6 +4,9 @@ import MainContent from './Components/MainContent';
 import About from './Components/About';
 import Skills from './Components/Skills';
 import Education from './Components/Education';
+import Projects from './Components/Projects';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 const Portfolio = () => {
     return (
@@ -17,6 +20,9 @@ const Portfolio = () => {
                 <About />
                 <Skills/>
                 <Education/>
+                <Projects/>
+                <Contact/>
+                <Footer/>
                 {/* Add other sections like <Skill />, <Projects />, etc. here */}
             </div>
         </div>

@@ -47,7 +47,7 @@ const Skills = () => {
         <a
           href="/resume.pdf"
           download
-          className="inline-block bg-secondary text-base-100 px-6 py-3 rounded-xl font-medium hover:bg-accent transition"
+                        className="inline-block bg-primary  text-secondary hover:text-base-100 px-5 py-2 mt-4 rounded hover:bg-accent transition"
         >
           Download CV
         </a>

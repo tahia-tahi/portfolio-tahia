@@ -11,3 +11,7 @@
   --color-neutral: #1d2024;
   --color-text: #939597;
 }
+
+html {
+  scroll-behavior: smooth;
+}

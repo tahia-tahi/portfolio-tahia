@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const MainContent = () => {
     return (
-        <div id='#home' className=" w-full min-h-screen text-secondary">
+        <div id='home' className=" w-full min-h-screen text-secondary">
             {/* Full-Screen Header Section with Background */}
             <div className="relative h-screen">
                 {/* Background Image */}
@@ -38,7 +38,7 @@ const MainContent = () => {
                     <p className="text-primary mt-1">Based in Bangladesh</p>
                     <a
                         href="/resume.pdf"
-                        className="inline-block bg-secondary text-base-100 px-5 py-2 mt-4 rounded-xl hover:bg-accent transition"
+                        className="inline-block bg-primary  text-secondary hover:text-base-100 px-5 py-2 mt-4 rounded hover:bg-accent transition"
                         download
                     >
                         Download Resume

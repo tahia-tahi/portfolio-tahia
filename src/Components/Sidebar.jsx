@@ -42,7 +42,7 @@ const Sidebar = () => {
             </nav>
 
             {/* Social Icons */}
-            <div className="flex gap-4 mt-auto pb-6">
+            <div className="flex gap-4 mt-auto pt-3">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <FaFacebook className="w-6 h-6 hover:text-accent" />
                 </a>
