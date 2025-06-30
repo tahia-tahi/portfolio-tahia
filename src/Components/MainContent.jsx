@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const MainContent = () => {
     return (
-        <div className=" w-full min-h-screen text-secondary">
+        <div id='#home' className=" w-full min-h-screen text-secondary">
             {/* Full-Screen Header Section with Background */}
             <div className="relative h-screen">
                 {/* Background Image */}
