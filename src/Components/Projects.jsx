@@ -13,7 +13,7 @@ const projects = [
     image: img1,
     liveLink: 'https://jass-event.web.app/',
     githubLink: 'https://github.com/tahia-tahi/jazz-events',
-    detailsLink: '/assets/Jazz_Events_Details.pdf',
+    detailsLink: '/assets/Jazz Events.pdf',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const projects = [
     liveLink: 'https://collab-learn-b1813.web.app/',
     githubLink: 'https://github.com/tahia-tahi/collab-learn',
     serverLink: 'https://github.com/tahia-tahi/collab-learn-server',
-    detailsLink: '/assets/Collab_Learn_Details.pdf',
+    detailsLink: '/assets/Collab Learn.pdf',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const projects = [
     liveLink: 'https://lawn-shaper.web.app/',
     githubLink: 'https://github.com/tahia-tahi/lawn-shaper',
     serverLink: 'https://github.com/tahia-tahi/lawn-shaper-server',
-    detailsLink: '/assets/Lawn_Shaper_Details.pdf',
+    detailsLink: '/assets/Lawn Shaper.pdf',
   },
 ];
 
