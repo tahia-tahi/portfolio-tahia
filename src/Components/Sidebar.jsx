@@ -49,7 +49,7 @@ const Sidebar = () => {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="w-6 h-6 hover:text-accent" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/tahia-tahi" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="w-6 h-6 hover:text-accent" />
                 </a>
             </div>

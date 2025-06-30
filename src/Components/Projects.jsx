@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaExternalLinkAlt, FaGithub, FaInfoCircle, FaServer } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import img1 from '../assets/Jazz Events.png'; 
 import img2 from '../assets/Collab Learn.png'; 
 import img3 from '../assets/LawnShaper.png'; 
@@ -8,41 +11,45 @@ const projects = [
   {
     id: 1,
     title: 'Jazz Events',
-    description: 'A modern event management web app where users can book jazz shows, see event details, and manage tickets. Admin can add/edit/delete events.',
+    description: 'A modern event management web app where users can book jazz shows...',
     technologies: ['React', 'Tailwind CSS', 'Firebase', 'DaisyUI'],
     image: img1,
     liveLink: 'https://jass-event.web.app/',
     githubLink: 'https://github.com/tahia-tahi/jazz-events',
-    detailsLink: '/assets/Jazz Events.pdf',
+    detailsLink: '/assets/jazz-events.pdf',
   },
   {
     id: 2,
     title: 'Collab Learn',
-    description: 'A collaborative learning platform where users can create/join courses. It includes JWT auth, payment, and role-based dashboards (admin/instructor/student).',
+    description: 'A collaborative learning platform where users can create/join courses...',
     technologies: ['React', 'Tailwind CSS', 'Firebase', 'DaisyUI', 'MongoDB', 'Express.js', 'JWT', 'Vite'],
     image: img2,
     liveLink: 'https://collab-learn-b1813.web.app/',
     githubLink: 'https://github.com/tahia-tahi/collab-learn',
     serverLink: 'https://github.com/tahia-tahi/collab-learn-server',
-    detailsLink: '/assets/Collab Learn.pdf',
+    detailsLink: '/assets/collab-learn.pdf',
   },
   {
     id: 3,
     title: 'Lawn Shaper',
-    description: 'A lawn care service marketplace where customers can hire professional gardeners. Includes booking system, payment integration, and dashboards.',
+    description: 'A lawn care service marketplace where customers can hire gardeners...',
     technologies: ['React', 'Tailwind CSS', 'Firebase', 'DaisyUI', 'MongoDB', 'Express.js', 'Vite'],
     image: img3,
     liveLink: 'https://lawn-shaper.web.app/',
     githubLink: 'https://github.com/tahia-tahi/lawn-shaper',
     serverLink: 'https://github.com/tahia-tahi/lawn-shaper-server',
-    detailsLink: '/assets/Lawn Shaper.pdf',
+    detailsLink: '/assets/lawn-shaper.pdf',
   },
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <section id="projects" className="bg-base-100 px-6 py-16 text-secondary">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12" data-aos="fade-up">
         <p className="text-accent text-xs font-normal uppercase tracking-widest">
           <span className="bg-primary p-1 text-secondary font-semibold">Projects</span>
         </p>
@@ -50,8 +57,12 @@ const Projects = () => {
       </div>
 
       <div className="space-y-12 max-w-6xl mx-auto">
-        {projects.map((project) => (
-          <div key={project.id} className="flex flex-col md:flex-row items-center gap-8 bg-white border border-primary rounded-lg shadow-md p-6">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className="flex flex-col md:flex-row items-center gap-8 bg-white border border-primary rounded-lg shadow-md p-6"
+            data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+          >
             {/* Image */}
             <div className="w-full md:w-3/5">
               <img src={project.image} alt={project.title} className="rounded-lg shadow-md w-full object-cover" />
@@ -97,8 +108,7 @@ const Projects = () => {
                 )}
                 <a
                   href={project.detailsLink}
-                                      target="_blank"
-
+                  target="_blank"
                   className="text-secondary hover:text-accent flex items-center gap-1 transition-transform duration-300 ease-in-out hover:scale-110"
                 >
                   <FaInfoCircle /> <span className="text-sm">Details</span>
