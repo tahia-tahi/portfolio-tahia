@@ -48,9 +48,9 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="bg-base-100 px-6 py-16 text-secondary">
+    <section id="projects" className="bg-base-100 px-4 sm:px-6 md:px-12 py-16 text-secondary">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="text-accent text-xs font-normal uppercase tracking-widest">
+        <p className="text-accent text-xs sm:text-sm font-normal uppercase tracking-widest">
           <span className="bg-primary p-1 text-secondary font-semibold">Projects</span>
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mt-2 text-accent">Featured Work</h2>
@@ -60,22 +60,31 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row items-center gap-8 bg-white border border-primary rounded-lg shadow-md p-6"
+            className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white border border-primary rounded-lg shadow-md p-6"
             data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
           >
             {/* Image */}
             <div className="w-full md:w-3/5">
-              <img src={project.image} alt={project.title} className="rounded-lg shadow-md w-full object-cover" />
+              <img
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="rounded-lg shadow-md w-full max-w-full object-cover mb-4 md:mb-0"
+              />
             </div>
 
             {/* Content */}
             <div className="w-full md:w-2/5 space-y-4 text-center md:text-left">
               <h3 className="text-2xl font-bold text-secondary">{project.title}</h3>
-              <p className="text-text">{project.description}</p>
+              <p className="text-secondary">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 {project.technologies.map((tech, i) => (
-                  <span key={i} className="bg-primary text-secondary px-2 py-1 rounded text-xs font-semibold">{tech}</span>
+                  <span
+                    key={i}
+                    className="bg-primary text-secondary px-2 py-1 rounded text-xs font-semibold"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
 
@@ -109,6 +118,7 @@ const Projects = () => {
                 <a
                   href={project.detailsLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary hover:text-accent flex items-center gap-1 transition-transform duration-300 ease-in-out hover:scale-110"
                 >
                   <FaInfoCircle /> <span className="text-sm">Details</span>

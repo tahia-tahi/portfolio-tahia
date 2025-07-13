@@ -27,10 +27,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-base-100 px-6 py-16 text-secondary">
+    <section id="contact" className="bg-base-100 px-4 sm:px-6 md:px-12 py-16 text-secondary">
       {/* Section Title */}
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="text-accent text-xs font-normal uppercase tracking-widest">
+        <p className="text-accent text-xs sm:text-sm font-medium uppercase tracking-widest">
           <span className="bg-primary p-1">Contact</span>
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mt-2">Get In Touch</h2>
@@ -43,11 +43,25 @@ const Contact = () => {
         <div className="space-y-6" data-aos="fade-right">
           <div className="flex items-center gap-4">
             <FaEnvelope className="text-primary text-xl" />
-            <a href="mailto:tahiaofficial1@gmail.com" className="hover:text-accent transition-all duration-300">tahiaofficial1@gmail.com</a>
+            <a
+              href="mailto:tahiaofficial1@gmail.com"
+              className="hover:text-accent transition-all duration-300"
+              aria-label="Send Email"
+            >
+              tahiaofficial1@gmail.com
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <FaWhatsapp className="text-primary text-xl" />
-            <a href="https://wa.me/8801405561667" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-all duration-300">WhatsApp Me</a>
+            <a
+              href="https://wa.me/8801405561667"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-all duration-300"
+              aria-label="WhatsApp Me"
+            >
+              WhatsApp Me
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <FaPhoneAlt className="text-primary text-xl" />
@@ -55,10 +69,34 @@ const Contact = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 mt-6 text-xl">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-all duration-300"><FaFacebook /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-all duration-300"><FaLinkedin /></a>
-            <a href="https://github.com/tahia-tahi" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-all duration-300"><FaGithub /></a>
+          <div className="flex gap-6 mt-6 text-2xl sm:text-xl md:text-2xl">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-all duration-300"
+              aria-label="Facebook"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-all duration-300"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/tahia-tahi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-all duration-300"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
           </div>
         </div>
 
@@ -68,37 +106,41 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Your Name"
+            aria-label="Your Name"
             required
-            className="w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+            className="w-full max-w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition mb-3"
             onChange={handleChange}
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
+            aria-label="Your Email"
             required
-            className="w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+            className="w-full max-w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition mb-3"
             onChange={handleChange}
           />
           <input
             type="text"
             name="subject"
             placeholder="Subject"
+            aria-label="Subject"
             required
-            className="w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+            className="w-full max-w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition mb-3"
             onChange={handleChange}
           />
           <textarea
             name="message"
             rows="5"
             placeholder="Your Message"
+            aria-label="Your Message"
             required
-            className="w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
+            className="w-full max-w-full px-4 py-2 rounded border border-gray-400 bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"
             onChange={handleChange}
           ></textarea>
           <button
             type="submit"
-            className="inline-block bg-primary text-secondary hover:text-base-100 px-5 py-2 mt-4 rounded hover:bg-accent transition"
+            className="inline-block bg-primary text-secondary hover:text-base-100 px-5 py-2 mt-4 rounded hover:bg-accent transition w-full md:w-auto"
           >
             Send Message
           </button>

@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 const Education = () => {
   return (
-    <section id="education" className="bg-base-100 px-6 py-16 text-secondary">
+    <section id="education" className="bg-base-100 px-4 sm:px-6 md:px-12 py-16 text-secondary">
       {/* Section Title */}
       <div className="text-center mb-12">
-        <p className="text-accent text-xs font-normal uppercase tracking-widest">
+        <p className="text-accent text-xs sm:text-sm font-medium uppercase tracking-widest">
           <span className="bg-primary p-1">Education</span>
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">My Academic Journey</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">My Academic Journey</h2>
       </div>
 
       {/* Main Content */}
@@ -23,8 +23,8 @@ const Education = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <div className="w-40 h-40 rounded-full bg-primary flex items-center justify-center shadow-lg">
-            <FaGraduationCap size={140} className="text-secondary" />
+          <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full bg-primary flex items-center justify-center shadow-lg max-w-full">
+            <FaGraduationCap size={110} className="text-secondary" />
           </div>
         </motion.div>
 
@@ -36,8 +36,10 @@ const Education = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold">Bachelor of Business Administration (BBA)</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm md:text-base">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">
+            Bachelor of Business Administration (BBA)
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm sm:text-base max-w-xl mx-auto md:mx-0">
             <div>
               <p className="font-semibold">University:</p>
               <p>University of Chittagong</p>

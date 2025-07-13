@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="bg-white px-6 py-16 text-gray-800">
+    <section id="about" className="bg-white px-4 sm:px-6 md:px-12 py-16 text-gray-800">
       {/* Section Title */}
       <motion.div
         className="text-center mb-12"
@@ -13,26 +13,26 @@ const About = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <p className="text-primary text-xs font-medium uppercase tracking-widest">
-          <span className="bg-primary text-white px-2 py-1 rounded">About Me</span>
+        <p className="text-primary text-xs sm:text-sm font-medium uppercase tracking-widest">
+          <span className="bg-primary text-black px-2 py-1 rounded">About Me</span>
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">Know Me More</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">Know Me More</h2>
       </motion.div>
 
       {/* Main Content */}
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-5xl mx-auto">
         {/* Left Text Content */}
         <motion.div
-          className="md:w-2/3 space-y-4"
+          className="md:w-2/3 space-y-4 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
             I am <span className="border-b-4 border-primary inline-block">Tahia</span>
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-700">
             I'm a designer and developer who finds joy in creating simple, clean, and user-focused websites that truly serve their purpose.
             I’m always eager to take on new projects and believe in working with dedication, clarity, and purpose.
             <br /><br />
@@ -52,15 +52,15 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="w-40 h-40 rounded-full bg-primary flex items-center justify-center shadow-lg">
-            <FaCode size={140} className="text-white" />
+          <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-primary flex items-center justify-center shadow-lg max-w-full">
+            <FaCode size={120} className="text-white" />
           </div>
         </motion.div>
       </div>
 
       {/* Info Grid */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto text-sm md:text-base"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto text-sm sm:text-base"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
