@@ -11,17 +11,19 @@ export default {
     themes: [
       {
         myportfolio: {
-          "primary": "#f5df4e",
-          "accent": "#1d2024",
-          "base-100": "#F8F9FA",
-          "secondary": "#212529",
-          "neutral": "#1d2024",
-          "neutral-focus": "#F8F9FA",
-          "info": "#3ABFF8",
-          "success": "#36D399",
-          "warning": "#FBBD23",
-          "error": "#F87272",
-        },
+  "primary": "#140C1C",        // dark background or brand color
+  "secondary": "#000000",      // text color or hover contrast
+  "accent": "#5A4EB0",         // links, buttons, hovers
+  "base-100": "#ffffff",       // card or light section background
+  "neutral": "#140C1C",        // similar to primary for consistent dark theme
+  "neutral-focus": "#5A4EB0",  // highlight focus state
+  "info": "#D4C0FB",           // soft lavender, can use in light badges or icons
+  "success": "#36D399",        // optional, can stay default
+  "warning": "#FBBD23",        // optional, can stay default
+  "error": "#F87272",          // optional, can stay default
+  "text-primary": "#D4C0FB"    // custom (not standard DaisyUI), used manually
+}
+,
       },
     ],
   },
