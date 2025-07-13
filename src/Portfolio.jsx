@@ -15,15 +15,14 @@ const Portfolio = () => {
             <Sidebar />
 
             {/* Scrollable Right Content */}
-            <div className="ml-64 w-full overflow-x-hidden">
+            <div className="w-full md:ml-64 overflow-x-hidden">
                 <MainContent />
                 <About />
-                <Skills/>
-                <Education/>
-                <Projects/>
-                <Contact/>
-                <Footer/>
-                {/* Add other sections like <Skill />, <Projects />, etc. here */}
+                <Skills />
+                <Education />
+                <Projects />
+                <Contact />
+                <Footer />
             </div>
         </div>
     );
